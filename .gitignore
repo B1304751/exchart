@@ -24,4 +24,5 @@ hs_err_pid*
 /.classpath
 /.project
 /.settings/
-/target/
+/target/*
+bower_components/*
