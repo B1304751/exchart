@@ -1,0 +1,289 @@
+<html>
+<head>
+<!-- Styles -->
+<style>
+#chartdiv {
+ width: 100%;
+  height: 500px;
+}				
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+<!-- Chart code -->
+<script>
+/**
+ * Line Chart #1
+ */
+var day = [1, 2, 3, 4, 5];
+var value = [120, 121, 119, 115, 210];
+ 
+AmCharts.makeChart( "line1", {
+  "type": "serial",
+  "theme": "light",
+ 
+  "dataProvider": [ {
+    "day": 1,
+    "value": 120
+  }, {
+    "day": 2,
+    "value": 124
+  }, {
+    "day": 3,
+    "value": 127
+  }, {
+    "day": 4,
+    "value": 122
+  }, {
+    "day": 5,
+    "value": 121
+  }, {
+    "day": 6,
+    "value": 123
+  }, {
+    "day": 7,
+    "value": 118
+  }, {
+    "day": 8,
+    "value": 113
+  }, {
+    "day": 9,
+    "value": 122
+  }, {
+    "day": 10,
+    "value": 125,
+    "bullet": "round"
+  } ],
+  "categoryField": "day",
+  "autoMargins": false,
+  "marginLeft": 0,
+  "marginRight": 5,
+  "marginTop": 0,
+  "marginBottom": 0,
+  "graphs": [ {
+    "valueField": "value",
+    "bulletField": "bullet",
+    "showBalloon": false,
+    "lineColor": "#a9ec49"
+  } ],
+  "valueAxes": [ {
+    "gridAlpha": 0,
+    "axisAlpha": 0
+  } ],
+  "categoryAxis": {
+    "gridAlpha": 0,
+    "axisAlpha": 0,
+    "startOnAxis": true
+  }
+} );
+
+/**
+ * Column Chart #1
+ */
+AmCharts.makeChart( "column1", {
+  "type": "serial",
+  "dataProvider": [ {
+    "day": 1,
+    "value": -5
+  }, {
+    "day": 2,
+    "value": 3
+  }, {
+    "day": 3,
+    "value": 7
+  }, {
+    "day": 4,
+    "value": -3
+  }, {
+    "day": 5,
+    "value": 3
+  }, {
+    "day": 6,
+    "value": 4
+  }, {
+    "day": 7,
+    "value": 6
+  }, {
+    "day": 8,
+    "value": -3
+  }, {
+    "day": 9,
+    "value": -2
+  }, {
+    "day": 10,
+    "value": 6
+  } ],
+  "categoryField": "day",
+  "autoMargins": false,
+  "marginLeft": 0,
+  "marginRight": 0,
+  "marginTop": 0,
+  "marginBottom": 0,
+  "graphs": [ {
+    "valueField": "value",
+    "type": "column",
+    "fillAlphas": 1,
+    "lineColor": "#a9ec49",
+    "showBalloon": false
+  } ],
+  "valueAxes": [ {
+    "gridAlpha": 0,
+    "axisAlpha": 0
+  } ],
+  "categoryAxis": {
+    "gridAlpha": 0,
+    "axisAlpha": 0
+  }
+} );
+
+/**
+ * Line Chart #2
+ */
+AmCharts.makeChart( "line2", {
+  "type": "serial",
+  "dataProvider": [ {
+    "day": 1,
+    "value": 120
+  }, {
+    "day": 2,
+    "value": 54
+  }, {
+    "day": 3,
+    "value": -18
+  }, {
+    "day": 4,
+    "value": -12
+  }, {
+    "day": 5,
+    "value": -51
+  }, {
+    "day": 6,
+    "value": 12
+  }, {
+    "day": 7,
+    "value": 56
+  }, {
+    "day": 8,
+    "value": 113
+  }, {
+    "day": 9,
+    "value": 142
+  }, {
+    "day": 10,
+    "value": 125
+  } ],
+  "categoryField": "day",
+  "autoMargins": false,
+  "marginLeft": 0,
+  "marginRight": 5,
+  "marginTop": 0,
+  "marginBottom": 0,
+  "graphs": [ {
+    "valueField": "value",
+    "showBalloon": false,
+    "lineColor": "#ffbf63",
+    "negativeLineColor": "#289eaf"
+  } ],
+  "valueAxes": [ {
+    "gridAlpha": 0,
+    "axisAlpha": 0,
+    "guides": [ {
+      "value": 0,
+      "lineAlpha": 0.1
+    } ]
+  } ],
+  "categoryAxis": {
+    "gridAlpha": 0,
+    "axisAlpha": 0,
+    "startOnAxis": true
+  }
+} );
+
+/**
+ * Column Chart #2
+ */
+AmCharts.makeChart( "column2", {
+  "type": "serial",
+  "dataProvider": [ {
+    "day": 1,
+    "value": -5
+  }, {
+    "day": 2,
+    "value": 3
+  }, {
+    "day": 3,
+    "value": 7
+  }, {
+    "day": 4,
+    "value": -3
+  }, {
+    "day": 5,
+    "value": 3
+  }, {
+    "day": 6,
+    "value": 4
+  }, {
+    "day": 7,
+    "value": 6
+  }, {
+    "day": 8,
+    "value": -3
+  }, {
+    "day": 9,
+    "value": -2
+  }, {
+    "day": 10,
+    "value": 6
+  } ],
+  "categoryField": "day",
+  "autoMargins": false,
+  "marginLeft": 0,
+  "marginRight": 0,
+  "marginTop": 0,
+  "marginBottom": 0,
+  "graphs": [ {
+    "valueField": "value",
+    "type": "column",
+    "fillAlphas": 1,
+    "showBalloon": false,
+    "lineColor": "#ffbf63",
+    "negativeFillColors": "#289eaf",
+    "negativeLineColor": "#289eaf"
+  } ],
+  "valueAxes": [ {
+    "gridAlpha": 0,
+    "axisAlpha": 0
+  } ],
+  "categoryAxis": {
+    "gridAlpha": 0,
+    "axisAlpha": 0
+  }
+} );
+
+</script>
+
+<!-- HTML -->
+<!-- first chart group -->
+<div class="chart-block" style="padding:28px">
+	<div id="line1" style="vertical-align: middle; display: inline-block; width: 250px; height: 110px;"></div>
+	<div id="column1" style="vertical-align: middle;display: inline-block; width: 250px; height: 110px;"></div>
+</div>
+
+<!-- second chart group -->
+<div class="chart-block" style="padding:28px">
+	<div id="line2" style="vertical-align: middle; display: inline-block; width: 250px; height: 110px;"></div>
+	<div id="column2" style="vertical-align: middle;display: inline-block; width: 250px; height: 110px;"></div>
+</div>
+
+</head>
+<body>
+<!-- HTML -->
+<div id="chartdiv"></div>
+</body>
+</html>
